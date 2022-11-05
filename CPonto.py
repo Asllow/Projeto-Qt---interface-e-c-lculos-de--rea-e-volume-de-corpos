@@ -12,4 +12,8 @@ class CPonto:
         self.y = y
     def conversor(self):
         self.r = (self.x**2+self.y**2)**(0.5)
-        self.ang = np.arctan(self.y/self.x)
+        self.ang = np.degrees(np.arctan(self.y/self.x))
+
+y = CPonto(1, 1)
+y.conversor()
+print(y.r, y.ang)
