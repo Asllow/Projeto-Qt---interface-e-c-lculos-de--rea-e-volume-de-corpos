@@ -1,4 +1,1 @@
-teste =  "teste"
-print(teste)
-
-TESTE = "BLABLABLA"
+testegeral = 0
