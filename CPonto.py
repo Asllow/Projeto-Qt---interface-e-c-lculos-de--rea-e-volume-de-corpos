@@ -7,3 +7,4 @@ class CPonto:
     def setPonto(self, x=0, y=0):
         self.x = x
         self.y = y
+        
