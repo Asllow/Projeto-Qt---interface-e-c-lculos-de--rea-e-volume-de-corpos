@@ -30,3 +30,4 @@ class CPonto:
     def setCoordPol(self, r=0, ang=0):
         self.r = r
         self.ang = ang
+        
