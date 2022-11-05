@@ -11,6 +11,7 @@ class CPonto:
     def getCoordCart(self):
         return self.x, self.y
     def getCoordPol(self):
+        self.conversor()
         return self.r, self.ang
     def setCoordCart(self, x=0, y=0):
         self.x = x
@@ -20,5 +21,5 @@ class CPonto:
         self.ang = ang
 
 y = CPonto(1, 1)
-y.conversor()
-print(y.r, y.ang)
+r, ang = y.getCoordPol()
+print(r, ang)
