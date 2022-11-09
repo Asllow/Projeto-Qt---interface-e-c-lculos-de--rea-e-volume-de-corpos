@@ -6,18 +6,8 @@ class CPonto:
         self.y = y
         self.r = r
         self.ang = np.radians(ang)
-    def conversorCart(self):
-        self.x = self.r*np.cos(self.ang)
-        self.y = self.r*np.sin(self.ang)
-    def conversorPol(self):
-        self.r = (self.x**2+self.y**2)**(0.5)
-        self.ang = np.degrees(np.arctan(self.y/self.x))
-    def getCoordCart(self):
-        if (self.ang==0 and self.r==0):
-            return self.x, self.y
-        else:
-            self.conversorCart()
-            return self.x, self.y
-    def setCoordCart(self, x=0, y=0):
+    def getCoordenates(self):
+        return self.x, self.y
+    def setCoordenates(self, x=0, y=0):
         self.x = x
         self.y = y
