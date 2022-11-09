@@ -18,15 +18,6 @@ class CPonto:
         else:
             self.conversorCart()
             return self.x, self.y
-    def getCoordPol(self):
-        if (self.x==0 and self.y==0):
-            return self.r, self.ang
-        else:
-            self.conversorPol()
-            return self.r, self.ang
     def setCoordCart(self, x=0, y=0):
         self.x = x
         self.y = y
-    def setCoordPol(self, r=0, ang=0):
-        self.r = r
-        self.ang = ang
