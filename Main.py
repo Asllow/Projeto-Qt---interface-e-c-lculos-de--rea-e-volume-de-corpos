@@ -8,7 +8,7 @@ class App (QApplication):
         super(App, self).__init__(sys_argv)
         
         self.model = Model()
-        self.view = View(self.model)
+        self.view = View()
         self.view.show()
 
 if __name__ == "__main__":
