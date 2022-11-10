@@ -38,8 +38,8 @@ class CShape:
     @dispatch (int, int)
     def areaTriangle (h , b):
         return ( b*h/2)
-    @dispatch ( CPonto, CPonto, CPonto)
-    def areaTriangle ( p1, p2, p3) :  
+    @dispatch (CPonto, CPonto, CPonto)
+    def areaTriangle (p1, p2, p3) :  
         M = np.ones((3, 3), dtype= float) 
         x1 , y1 = p1.getCoordinates()
         x2 , y2 = p2.getCoordinates() 
@@ -76,4 +76,7 @@ class CShape:
         s2 = y1*x2 + y2*x3 + y3*x4 + y4*x1
         a = (((s1 - s2)**2)**(0.5))/2
         return a
-#atualizado
+    
+if __name__ == '__main__':
+    x = CPonto (0,1)
+    print (x)

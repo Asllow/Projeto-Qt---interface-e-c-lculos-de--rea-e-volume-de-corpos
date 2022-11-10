@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtCore import pyqtSlot
 from PyQt5  import QtCore, QtGui, QtWidgets
 from PyQt5.uic import loadUiType
+from CShape import *
 
 Ui_MainWindow, QMainWindow = loadUiType("form.ui")
 
@@ -18,11 +19,15 @@ class View (QMainWindow, Ui_MainWindow):
     def on_button_clicked_circle (self):
         x1 = float(self.x1.text())
         y1 = float(self.y1.text())
+        p1 = CPonto(x1, y1)
+        
+        area = CShape.areaCircle(p1)
         if self.x2.text()==True:
             x2 = float(self.x2.text())
             y2 = float(self.y2.text())
-        
-        result = str(x1)
+            p2 = CPonto(x2, y2)
+            area = CShape.areaCircle(p1, p2)
+        result = str(area)
         self.result.setText(result)
     def on_button_clicked_triangle (self):
         x1 = float(self.x1.text())
@@ -32,7 +37,12 @@ class View (QMainWindow, Ui_MainWindow):
         y2 = float(self.y2.text())
         y3 = float(self.y3.text())
         
-        result = str(x1)
+        p1 = CPonto(x1, y1)
+        p2 = CPonto(x2, y2)
+        p3 = CPonto(x3, y3)
+        area = CShape.areaTriangle(p1, p2, p3)
+        
+        result = str(area)
         self.result.setText(result)
     def on_button_clicked_polygon (self):
         x1 = float(self.x1.text())
@@ -44,5 +54,11 @@ class View (QMainWindow, Ui_MainWindow):
         y3 = float(self.y3.text())
         y4 = float(self.y4.text())
         
-        result = str(x1)
+        p1 = CPonto(x1, y1)
+        p2 = CPonto(x2, y2)
+        p3 = CPonto(x3, y3)
+        p4 = CPonto(x4, y4)
+        area = CShape.areaPolygon(p1, p2, p3, p4)
+        
+        result = str(area)
         self.result.setText(result)
