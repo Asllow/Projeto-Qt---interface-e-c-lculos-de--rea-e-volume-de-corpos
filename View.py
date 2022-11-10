@@ -1,15 +1,17 @@
 import sys
+from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtCore import pyqtSlot
 from PyQt5  import QtCore, QtGui, QtWidgets
 from PyQt5.uic import loadUiType
-#from CTriangulo import *
 
 Ui_MainWindow, QMainWindow = loadUiType("form.ui")
 
-class Main (QMainWindow, Ui_MainWindow):
+class View (QMainWindow, Ui_MainWindow):
     def __init__ (self):
-        super(Main, self).__init__()
+        super(View, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("Cálculo de Área")
+        
         self.area_circle.clicked.connect(self.on_button_clicked_circle)
         self.area_triangle.clicked.connect(self.on_button_clicked_triangle)
         self.area_polygon.clicked.connect(self.on_button_clicked_polygon)
@@ -44,9 +46,3 @@ class Main (QMainWindow, Ui_MainWindow):
         
         result = str(x1)
         self.result.setText(result)
-
-if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
-    main = Main()
-    main.show()
-    sys.exit(app.exec_())
