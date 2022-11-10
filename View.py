@@ -20,9 +20,10 @@ class View (QMainWindow, Ui_MainWindow):
         x1 = float(self.x1.text())
         y1 = float(self.y1.text())
         p1 = CPonto(x1, y1)
+        print(self.x2.text())
         
         area = CShape.areaCircle(p1)
-        if self.x2.text()==True:
+        if self.x2.text()!=0 and self.y2.text()!=0:
             x2 = float(self.x2.text())
             y2 = float(self.y2.text())
             p2 = CPonto(x2, y2)
