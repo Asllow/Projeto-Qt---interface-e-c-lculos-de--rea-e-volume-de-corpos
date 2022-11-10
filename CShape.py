@@ -1,3 +1,4 @@
+g=0
 from CPonto import *
 from multipledispatch import dispatch
 import numpy as np
@@ -76,4 +77,3 @@ class CShape:
         s2 = y1*x2 + y2*x3 + y3*x4 + y4*x1
         a = (((s1 - s2)**2)**(0.5))/2
         return a
-#atualizado
