@@ -193,25 +193,25 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="area">
+  <widget class="QPushButton" name="area_circle">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>430</y>
+     <x>290</x>
+     <y>350</y>
      <width>141</width>
      <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>Área</string>
+    <string>Área Círculo</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="result">
    <property name="geometry">
     <rect>
      <x>300</x>
-     <y>490</y>
-     <width>431</width>
+     <y>400</y>
+     <width>441</width>
      <height>22</height>
     </rect>
    </property>
@@ -278,56 +278,69 @@
     </rect>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton">
+  <widget class="QPushButton" name="area_triangle">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>270</y>
-     <width>95</width>
-     <height>20</height>
+     <x>450</x>
+     <y>350</y>
+     <width>141</width>
+     <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>Círculo</string>
+    <string>Área Triângulo</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_2">
+  <widget class="QPushButton" name="area_polygon">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>300</y>
-     <width>95</width>
-     <height>20</height>
+     <x>610</x>
+     <y>350</y>
+     <width>141</width>
+     <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>Triângulo</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="radioButton_3">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>330</y>
-     <width>95</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Polígolo</string>
+    <string>Área Polígono</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_13">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>60</y>
-     <width>371</width>
+     <x>380</x>
+     <y>250</y>
+     <width>291</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Se não houver algum ponto, adicione 0 em suas coordenadas</string>
+    <string>Para o cálculo da área do círculo é preciso de 1 ou 2 pontos</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>270</y>
+     <width>271</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Para o cálculo da área do triângulo é preciso 3 pontos</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>290</y>
+     <width>281</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Para o cálculo da área do polígono é preciso 4 pontos</string>
    </property>
   </widget>
  </widget>

@@ -10,8 +10,29 @@ class Main (QMainWindow, Ui_MainWindow):
         super(Main, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("Cálculo de Área")
-        self.area.clicked.connect(self.on_button_clicked)
-    def on_button_clicked (self):
+        self.area_circle.clicked.connect(self.on_button_clicked_circle)
+        self.area_triangle.clicked.connect(self.on_button_clicked_triangle)
+        self.area_polygon.clicked.connect(self.on_button_clicked_polygon)
+    def on_button_clicked_circle (self):
+        x1 = float(self.x1.text())
+        y1 = float(self.y1.text())
+        if self.x2.text()==True:
+            x2 = float(self.x2.text())
+            y2 = float(self.y2.text())
+        
+        result = str(x1)
+        self.result.setText(result)
+    def on_button_clicked_triangle (self):
+        x1 = float(self.x1.text())
+        x2 = float(self.x2.text())
+        x3 = float(self.x3.text())
+        y1 = float(self.y1.text())
+        y2 = float(self.y2.text())
+        y3 = float(self.y3.text())
+        
+        result = str(x1)
+        self.result.setText(result)
+    def on_button_clicked_polygon (self):
         x1 = float(self.x1.text())
         x2 = float(self.x2.text())
         x3 = float(self.x3.text())
