@@ -46,3 +46,9 @@ class View (QMainWindow, Ui_MainWindow):
         
         result = str(x1)
         self.result.setText(result)
+
+if __name__ == '__main__':
+    app = QtWidgets.QApplication(sys.argv)
+    view = View()
+    view.show()
+    sys.exit(app.exec_())
