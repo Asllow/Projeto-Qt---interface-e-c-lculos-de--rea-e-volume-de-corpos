@@ -76,7 +76,3 @@ class CShape:
         s2 = y1*x2 + y2*x3 + y3*x4 + y4*x1
         a = (((s1 - s2)**2)**(0.5))/2
         return a
-    
-if __name__ == '__main__':
-    x = CPonto (0,1)
-    print (x)
