@@ -22,7 +22,20 @@ class CShape:
         r = (x1**2+y1**2)**(0.5)
         a = math.pi*r**2
         return a
-    @dispatch (float)
+    @dispatch(CPonto, int)
+    def areaCircle(p1, radio):
+        x1, y1 = p1.getCoordinates()
+        a = math.pi*radio**2
+        texto = f'Centro: {x1}, {y1} Área: {a}'
+        return texto
+    @dispatch(CPonto, CPonto)
+    def areaCircle(p1, p2):
+        x1, y1 = p1.getCoordinates()
+        x2, y2 = p2.getCoordinates()
+        r = ((x1-x2)**2+(y1-y2)**2)**(0.5)
+        a = math.pi*r**2
+        return a
+    @dispatch (int, int)
     def areaTriangle (h , b):
         return ( b*h/2)
     @dispatch ( CPonto, CPonto, CPonto)
@@ -30,7 +43,7 @@ class CShape:
         M = np.ones((3, 3), dtype= float) 
         x1 , y1 = p1.getCoordinates()
         x2 , y2 = p2.getCoordinates() 
-        x3 , y3 = p3 . getCoordinates() 
+        x3 , y3 = p3.getCoordinates() 
         M[0, 0] = x1 
         M[0 , 1] = y1 
         M[1 , 0] = x2 
@@ -39,7 +52,7 @@ class CShape:
         M[2 , 1] = y3
         D=np.linalg.det(M)
         return (D/2)
-    @dispatch(listPoints)
+    @dispatch(list)
     def areaPolygon(listPoints):
         p1 = listPoints[0]
         p2 = listPoints[1]
