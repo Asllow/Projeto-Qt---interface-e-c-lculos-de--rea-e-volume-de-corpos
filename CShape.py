@@ -35,6 +35,9 @@ class CShape:
         r = ((x1-x2)**2+(y1-y2)**2)**(0.5)
         a = abs(math.pi*r**2)
         return a
+    dispatch(list, list)
+    def area(x,y):
+        return 0.5*np.abs(np.dot(x,np.roll(y,1))-np.dot(y,np.roll(x,1)))
     @dispatch (int, int)
     def areaTriangle (h , b):
         return abs( b*h/2)

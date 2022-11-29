@@ -7,3 +7,5 @@ class CPonto:
     def setCoordinates(self, x=0, y=0):
         self.x = x
         self.y = y
+    def onlyPoint(*args):
+        return list(args)
