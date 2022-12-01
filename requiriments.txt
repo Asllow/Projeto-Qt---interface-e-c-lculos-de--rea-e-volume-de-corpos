@@ -1,0 +1,9 @@
+O seguinte código necessita das seguintes bibliotecas:
+.PyQt5
+.Numpy
+.MatPlotLib
+.Pillow
+.Scipy
+.MultipleDispatch
+Basta executar o Control para Rodar
+Trabalho Feito por Arthur Miranda e Guilherme Antônio
